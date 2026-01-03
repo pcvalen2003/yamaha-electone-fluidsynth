@@ -1,0 +1,3 @@
+El proyecto se divide en 2 partes:
+- El código en C de la Raspberry Pi Zero 2w (rpi de ahora en adelante), cuyos bancos de sonido y ritmos se encuentran en archivos YAML
+- El código en Arduino del STM32F103C8T6 (bluepill). La librería del STM32CubeIDE para MIDI-USB no funcionaba y encontré una de Arduino que cumplía los requisitos.
