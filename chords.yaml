@@ -1,0 +1,63 @@
+# Configuración de Acompañamiento (0=Silencio, 1=Tónica, 2=Segunda nota...)
+
+0: # Estilo 0 (Rock / Pop)
+  0: # Patrón 0: Pad (Acorde)
+    program: 89
+    mode: 'chord'
+    velocity: 70
+    steps: 16
+    pattern: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  1: # Patrón 1: Piano Rítmico (Negras)
+    program: 0
+    mode: 'chord'
+    velocity: 95
+    steps: 16
+    pattern: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+  2: # Patrón 2: Bajo (Tónica - Silencio - Tónica)
+    program: 33
+    mode: 'arp-once'
+    velocity: 110
+    steps: 16
+    # 1=Tónica. 0=Silencio.
+    pattern: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+  3: # Patrón 3: Arpegio Synth (1-2-3-2...)
+    program: 38
+    mode: 'arp-once' # Uso once pero lo escribo manual para controlar el ritmo
+    velocity: 100
+    steps: 16
+    # Nota 1, Nota 2, Nota 3, Nota 2... con silencios intercalados si quisieras
+    pattern: [1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2]
+
+1: # Estilo 1 (Disco)
+  0: # Clavinet
+    program: 7
+    mode: 'chord'
+    velocity: 100
+    steps: 16
+    pattern: [0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0]
+  1: # Bajo Octavas (1=Grave, 2=Agudo si tocas octavas)
+    program: 38
+    mode: 'arp-once'
+    velocity: 115
+    steps: 16
+    # Grave - Silencio - Agudo - Silencio
+    pattern: [1, 0, 2, 0, 1, 0, 2, 0, 1, 0, 2, 0, 1, 0, 2, 0]
+
+3: # Estilo 3 (Cumbia)
+  0: # Piano Contratiempo
+    program: 0
+    mode: 'chord'
+    steps: 16
+    pattern: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+  1: # Bajo Tumbao (Tónica... Quinta)
+    program: 32
+    mode: 'arp-once'
+    steps: 16
+    # Tónica(1) larga... Quinta(3 aprox)
+    pattern: [1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0]
+  3: # Pluck Reggaeton (Subiendo)
+    program: 25
+    mode: 'arp-loop'
+    steps: 16
+    # Cuenta hacia arriba (1, 2, 3...) y deja que el script haga el rebote
+    pattern: [0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 4, 0]
