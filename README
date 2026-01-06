@@ -1,3 +1,16 @@
 El proyecto se divide en 2 partes:
-- El código en C de la Raspberry Pi Zero 2w (rpi de ahora en adelante), cuyos bancos de sonido y ritmos se encuentran en archivos YAML
-- El código en Arduino del STM32F103C8T6 (bluepill). La librería del STM32CubeIDE para MIDI-USB no funcionaba y encontré una de Arduino que cumplía los requisitos.
+  - El código en C de la Raspberry Pi Zero 2w (rPi de ahora en adelante), cuyos bancos de sonido y ritmos se encuentran en archivos YAML
+  - El código en Arduino del STM32F103C8T6 (bluepill). La librería del STM32CubeIDE para MIDI-USB no funcionaba y encontré una de Arduino que cumplía los requisitos.
+
+
+#Electone
+Dejó de funcionar el DAL-II (Digital Analog Converter 2, entiendo yo que es un DAC), pero se pudo corroborar que la parte digital del teclado seguía funcionando. Esto es, arroja comandos MIDI de NoteON y NoteOFF para las teclas, y SysEx (System Exclusive) para los botones de selección.
+
+Es por esto que se utilizó todo el sistema aquí presentado para generar sonido, usando el Electone como un súper controlador MIDI. De esta manera, se desconectó toda la parte analógica del teclado y se dejó toda la parte digital trabajando con +5V, posibilitando alimentar el sistema desde un powerbank.
+Se removió entonces la fuente de alimentación, transformador y amplificador de potencia, reduciendo considerablemente el peso del equipo.
+
+También el panel derecho se reemplazó por un panel impreso en 3D custom, ya que las funcionalidades que el original incorporaba:
+  1. No se mapeaban a SysEx
+  2. Contenía los presets, los cuales podían llegar a romper la lectura del STM32
+
+Este nuevo panel incorpora una pantalla de 120x180 SPI que será utilizada por la rPi, y 5 teclas mecánicas que serán leidas por el STM32 y enviadas como CC a la rPi. 
