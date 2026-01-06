@@ -1,0 +1,102 @@
+# Definición de Ritmos
+# Estructura: Estilo -> Variación -> Instrumento -> [16 pasos]
+
+0: # Estilo 0 (Ej: Rock Básico)
+  steps: 16 # patrón de 16 semis
+  0: # Variación 0 (Intro / Simple)
+    36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] # Bombo
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Redo
+  1: # Variación 1 (Con Redoblante)
+    36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] # Bombo
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Redo
+    42: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0] # HiHat
+  2:
+    36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0] # Bombo
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Redo
+    42: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0] # HiHat
+    46: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] # HiHat open
+  3:
+    36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] # Bombo
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Redo
+    46: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0] # HiHat open
+  4:
+    36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0] # Bombo
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Redo
+    51: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0] # Ride
+
+
+  fills:
+    1:
+      36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # bombo
+      38: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1] # redo
+
+      resolution:
+        36: 127 # bombo
+        49: 127 # crash
+
+    2:
+      38: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # Redoblante (4 semis)
+      50: [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0] # Tom Alto (4 semis)
+      47: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0] # Tom Medio (4 semis)
+      43: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1] # Tom Bajo (4 semis)
+
+      resolution:
+        36: 127 # Bombo al caer
+        49: 127 # Crash 1 al caer (Platillo de remate)
+
+
+1: # Estilo 1 (Ej: Disco)
+  steps: 12
+  0: # Variación 0
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo en negras
+    38: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0] # Backbeat
+    46: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0] # HiHat Open (offbeat)
+
+3: # Cumbiancha
+  steps: 16
+  0: # Var 0: Cumbia Base (Bombo + HiHat a contratiempo)
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo (Negras)
+    42: [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1] # HiHat (Contratiempo)
+    56: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] # Cencerro (Marcando el 1 y 3)
+
+  1: # Var 1: Cumbia Villera (Entra el Cencerro furioso y Guiro/HH)
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo
+    42: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1] # HiHat (Guiro feel - Semicorcheas)
+    56: [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0] # Cencerro (Corcheas constantes)
+
+  2: # Var 2: Cumbia con Tumbadoras (Congas)
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo
+    56: [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0] # Cencerro (Contratiempo)
+    63: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0] # Conga Open
+    64: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] # Conga Low
+
+  3: # Var 3: Reggaeton Clásico (Dem Bow)
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo (4 on the floor)
+    38: [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0] # Redo (El ritmo Dem Bow: Tun-Pa-Tun-Pa)
+    42: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # HiHat (Marcando tiempos fuertes)
+
+  4: # Var 4: Perreo Intenso (Dem Bow + HiHats rápidos)
+    36: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0] # Bombo
+    38: [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0] # Redo Dem Bow
+    42: [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0] # HiHat rápido
+
+  # --- FILLS
+  fills:
+    1: # Fill Típico de Cumbia (Redoble de Timbales/Redo)
+      36: [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # Bombo marca el inicio
+      38: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1] # Redo ametralladora al final
+      56: [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0] # Cencerro al principio
+
+      resolution:
+        36: 127 # Bombo
+        49: 127 # Crash (Platillo)
+
+    2: # Fill Reggaeton (El "Rakata-Rakata")
+      36: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] # Bombo
+      38: [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0] # Redo sincopado
+      40: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1] # Redo secundario (Rimshot)
+
+      resolution:
+        36: 127 # Bombo
+        49: 127 # Crash
+
