@@ -1,0 +1,64 @@
+# Mapeo de Instrumentos (0 al 29)
+# Formato: [Banco, Programa]
+# GM Standard: Banco 0.
+# Si usás SoundFonts con bancos extra, cambiá el primer número.
+
+sounds:
+  0: [0, 0]    # Grand Piano
+  1: [0, 4]    # E. Piano 1
+  2: [0, 5]    # E. Piano 2
+  3: [0, 6]    # Harpsichord
+  4: [0, 7]    # Clavinet
+  5: [0, 16]   # Drawbar Organ
+  6: [0, 17]   # Percussive Organ
+  7: [0, 18]   # Rock Organ
+  8: [0, 19]   # Church Organ
+  9: [0, 21]   # Accordion
+  10: [0, 48]  # Strings 1
+  11: [0, 49]  # Strings 2
+  12: [0, 40]  # Violin
+  13: [0, 42]  # Cello
+  14: [0, 45]  # Pizzicato
+  15: [0, 56]  # Trumpet
+  16: [0, 57]  # Trombone
+  17: [0, 61]  # Brass Section
+  18: [0, 66]  # Tenor Sax
+  19: [0, 71]  # Clarinet
+  20: [0, 80]  # Lead 1 (Square)
+  21: [0, 81]  # Lead 2 (Saw)
+  22: [0, 90]  # Pad (Polysynth)
+  23: [0, 88]  # Pad (New Age)
+  24: [0, 32]  # Acoustic Bass
+  25: [0, 33]  # Electric Bass
+  26: [0, 38]  # Synth Bass
+  27: [0, 11]  # Vibraphone
+  28: [0, 14]  # Tubular Bells
+  29: [0, 127] # Gunshot
+
+# Mapeo Exclusivo para LEAD (CC 53)
+# Formato: [Banco, Programa, Portamento_Switch(0/1), Portamento_Time(0-127)]
+lead_sounds:
+  # --- VIENTOS ---
+  0: [0, 73, 0, 0]   # Flauta
+  1: [0, 56, 0, 0]   # Trompeta
+  2: [0, 65, 0, 0]   # Saxo Alto
+  3: [0, 57, 0, 0]   # Trombón
+  4: [0, 21, 0, 0]   # Acordeón (Musette)
+
+  # --- CUERDAS ---
+  5: [0, 40, 0, 0]   # Violín
+  6: [0, 42, 0, 0]   # Cello
+  7: [0, 110, 0, 0]  # Fiddle (Violín rústico)
+  8: [0, 50, 0, 0]   # Synth Strings 1
+
+  # --- SINTETIZADORES (Con Portamento) ---
+  9:  [0, 80, 1, 40]  # Lead 1 (Square) - Portamento Medio
+  10: [0, 81, 1, 60]  # Lead 2 (Sawtooth) - Portamento Lento (tipo Theremin)
+  11: [0, 87, 1, 20]  # Lead 8 (Bass+Lead) - Portamento Rápido
+  12: [0, 84, 1, 35]  # Lead 5 (Charang) - Muy funky
+
+  # --- PIANOS QUE CORTAN LA MEZCLA ---
+  13: [0, 1, 0, 0]    # Bright Acoustic Piano (Más brillo que el Grand)
+  14: [0, 3, 0, 0]    # Honky-Tonk (Piano de cantina)
+  15: [0, 7, 0, 0]    # Clavinet (Funky)
+  16: [0, 30, 0, 0]   # Distortion Guitar (Para solos rockeros)
